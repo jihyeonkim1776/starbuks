@@ -1,20 +1,3 @@
-const serachEl = document.querySelector(".search");
-const serachInputEl = serachEl.querySelector("input");
-
-serachEl.addEventListener("click", function () {
-  serachInputEl.focus();
-});
-
-serachInputEl.addEventListener("focus", function () {
-  serachEl.classList.add("focused");
-  serachInputEl.setAttribute("placeholder", "Search...");
-});
-
-serachInputEl.addEventListener("blur", function () {
-  serachEl.classList.remove("focused");
-  serachInputEl.setAttribute("placeholder", "");
-});
-
 const badgeEl = document.querySelector("header .badges");
 const toTopEl = document.querySelector("#to-top");
 
@@ -152,6 +135,3 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, "show")
     .addTo(new ScrollMagic.Controller());
 });
-
-const thisYear = document.querySelector(".this-year");
-thisYear.textContent = new Date().getFullYear();
